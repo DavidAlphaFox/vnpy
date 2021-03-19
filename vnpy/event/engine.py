@@ -27,7 +27,7 @@ class Event:
 # Defines handler function to be used in event engine.
 HandlerType = Callable[[Event], None]
 
-
+"""核心引擎有两个线程，一个线程用来执行事件，另外一个线程用来投递定时事件"""
 class EventEngine:
     """
     Event engine distributes event object based on its type
